@@ -12,51 +12,25 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<serenity.version>1.1.36</serenity.version>
-		<serenity.maven.version> 1.1.36</serenity.maven.version>
+		<serenity.version>1.5.3</serenity.version>
+		<serenity.maven.version> 1.5.3</serenity.maven.version>
 		<webdriver.driver>chrome</webdriver.driver>
 	</properties>
 
 	<dependencies>
 
-		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-java</artifactId>
-			<version>1.2.5</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-junit</artifactId>
-			<version>1.2.5</version>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-picocontainer</artifactId>
-			<version>1.2.4</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>3.0.1</version>
-		</dependency>
 
 		<!-- http://mvnrepository.com/artifact/net.serenity-bdd/serenity-core -->
 		<dependency>
 			<groupId>net.serenity-bdd</groupId>
 			<artifactId>serenity-core</artifactId>
-			<version>1.1.36</version>
+			<version>${serenity.version}</version>
 		</dependency>
 
 
@@ -64,7 +38,7 @@
 		<dependency>
 			<groupId>net.serenity-bdd</groupId>
 			<artifactId>serenity-cucumber</artifactId>
-			<version>1.1.8</version>
+			<version>1.5.4</version>
 		</dependency>
 
 		<dependency>
@@ -79,30 +53,10 @@
 			<version>1.6.1</version>
 		</dependency>
 
-	
-
-		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
-			<version>2.6</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.1</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>2.53.0</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>
-	
+
 	<plugins>
 	<plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
@@ -113,7 +67,7 @@
                     </includes>
                     <excludes>
                         <exclude>**/*.java</exclude>
-                    </excludes>      
+                    </excludes>
                 </configuration>
                 <executions>
                     <execution>
