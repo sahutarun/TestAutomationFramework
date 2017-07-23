@@ -1,19 +1,14 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 
 import net.serenitybdd.core.pages.PageObject;
+import net.thucydides.core.annotations.DefaultUrl;
 
-
+@DefaultUrl("http://www.executeautomation.com/demosite/Login.html")
 public class LoginPage extends PageObject {
-
-    public LoginPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-    }
 
     @FindBy(how = How.NAME, using = "UserName")
     public WebElement txtUserName;
@@ -24,10 +19,14 @@ public class LoginPage extends PageObject {
     @FindBy(how = How.NAME, using = "Login")
     public WebElement btnLogin;
 
-    public void Login(String userName, String password)
+    public void openLoginPage(){
+    	open();
+
+    }
+    public void Login()
     {
-        txtUserName.sendKeys(userName);
-        txtPassword.sendKeys(password);
+        txtUserName.sendKeys("admin");
+        txtPassword.sendKeys("adminPassword");
     }
 
     public void ClickLogin()
