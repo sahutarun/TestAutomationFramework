@@ -17,4 +17,9 @@ public class UserActions {
 		loginpage.Login();
 	}
 	
+	@Step
+	public void i_click_for_Login(){
+		loginpage.ClickLogin();
+	}
+	
 }

@@ -16,7 +16,7 @@ public class LoginPage extends PageObject {
     @FindBy(how = How.NAME, using = "Password")
     public WebElement txtPassword;
 
-    @FindBy(how = How.NAME, using = "Login")
+    @FindBy(how = How.NAME, using = "Logi")
     public WebElement btnLogin;
 
     public void openLoginPage(){

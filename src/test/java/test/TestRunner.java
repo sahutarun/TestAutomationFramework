@@ -9,7 +9,11 @@ import net.thucydides.core.annotations.Managed;
 
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "src/test/resources/features" , glue ={"stepDefination"})
+@CucumberOptions(features = "." , 
+glue ={"stepDefination"},
+plugin = {"pretty", "html:target/cucumber-reports",
+        "json:target/cucumber.json",
+        "rerun:@target/rerun.txt"})
 public class TestRunner {
 
 }

@@ -48,7 +48,7 @@ public class LoginSteps{
 
 	@Given("^I click login button$")
 	public void i_click_login_button() throws Throwable {
-
+       login.i_click_for_Login();
 
 	}
 
