@@ -20,10 +20,7 @@ import steps.UserActions;
 
 
 public class LoginSteps{
-	
-	@Managed(driver="chrome")                              
-    WebDriver driver;
-	
+		
 	@Steps
 	UserActions login;
 

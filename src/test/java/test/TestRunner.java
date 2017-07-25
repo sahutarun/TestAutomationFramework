@@ -13,7 +13,7 @@ import net.thucydides.core.annotations.Managed;
 glue ={"stepDefination"},
 plugin = {"pretty", "html:target/cucumber-reports",
         "json:target/cucumber.json",
-        "rerun:@target/rerun.txt"})
+        "rerun:target/rerun.txt"})
 public class TestRunner {
 
 }
