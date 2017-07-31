@@ -1,15 +1,21 @@
 package steps;
 
 import net.thucydides.core.annotations.Step;
+import pages.HomePage;
 import pages.LoginPage;
 
 public class UserActions {
 
 	LoginPage loginpage;
+	HomePage homepage;
 	
 	@Step
-	public void i_navigate_to_the_login_page(){
-		loginpage.openLoginPage();
+	public void user_is_one_the_home_page(){
+		homepage.open();
+	}
+	@Step
+	public void user_navigate_to_the_login_page(){
+		homepage.clickAccountLink();
 	}
 	
 	@Step

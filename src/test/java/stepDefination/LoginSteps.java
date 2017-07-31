@@ -24,20 +24,20 @@ public class LoginSteps{
 	@Steps
 	UserActions login;
 
+	@Given("^User is one the home page$")
+	public void user_is_one_the_home_page() throws Throwable {
+	   login.user_is_one_the_home_page();
 
-	@Given("^I navigate to the login page$")
+	}
+
+	@Given("^User navigate to the login page$")
 	public void i_navigate_to_the_login_page() throws Throwable {
-	//	System.setProperty("webdriver.chrome.driver", "tools/chromedriver");	
-	//	driver = new ChromeDriver();
-	//	driver.get("http://www.executeautomation.com/demosite/Login.html");
-		login.i_navigate_to_the_login_page();
+		login.user_navigate_to_the_login_page();
 		 
 	}
 
 	@And("^I enter the username and password$")
 	public void i_enter_the_following_for_Login() throws Throwable {	
-//		driver.findElement(By.name("UserName")).sendKeys("admin");;
-//		driver.findElement(By.name("Password")).sendKeys("adminpassword");;
 		login.i_enter_the_following_for_Login();
 
 	}

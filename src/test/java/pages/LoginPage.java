@@ -1,36 +1,32 @@
 package pages;
 
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
 import net.serenitybdd.core.pages.PageObject;
-import net.thucydides.core.annotations.DefaultUrl;
+import net.serenitybdd.core.pages.WebElementFacade;
 
 public class LoginPage extends PageObject {
 
-    @FindBy(how = How.NAME, using = "UserName")
-    public WebElement txtUserName;
+	@FindBy(how = How.ID, using = "log")
+	public WebElementFacade txtUserName;
 
-    @FindBy(how = How.NAME, using = "Password")
-    public WebElement txtPassword;
+	@FindBy(how = How.ID, using = "pwd")
+	public WebElementFacade txtPassword;
 
-    @FindBy(how = How.NAME, using = "Login")
-    public WebElement btnLogin;
+	@FindBy(how = How.ID, using = "login")
+	public WebElementFacade btnLogin;
 
-    public void openLoginPage(){
-    	open();
+	/* Function to enter username and password*/
+	public void Login()
+	{
+		txtUserName.type("admin");
+		txtPassword.type("adminPassword");
+	}
 
-    }
-    public void Login()
-    {
-        txtUserName.sendKeys("admin");
-        txtPassword.sendKeys("adminPassword");
-    }
+	/* Function to enter click login button*/
+	public void ClickLogin()
+	{
+		btnLogin.click();
+	}
 
-    public void ClickLogin()
-    {
-        btnLogin.submit();
-    }
-    
 }
