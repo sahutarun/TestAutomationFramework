@@ -19,13 +19,14 @@ public class UserActions {
 	}
 	
 	@Step
-	public void i_enter_the_following_for_Login(){
-		loginpage.Login();
+	public void i_enter_the_following_for_Login(String username, String password){
+		loginpage.Login(username, password);
 	}
 	
 	@Step
 	public void i_click_for_Login(){
 		loginpage.ClickLogin();
 	}
+
 	
 }

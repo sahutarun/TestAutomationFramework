@@ -21,10 +21,10 @@ public class LoginPage extends PageObject {
 	CommonFunctions functions = new CommonFunctions();
 
 	/* Function to enter username and password*/
-	public void Login()
+	public void Login(String username, String password)
 	{
-		txtUserName.type("admin");
-		txtPassword.type("adminPassword");
+		txtUserName.type(username);
+		txtPassword.type(password);
 	}
 
 	/* Function to enter click login button*/

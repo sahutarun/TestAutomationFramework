@@ -36,9 +36,9 @@ public class LoginSteps{
 		 
 	}
 
-	@And("^I enter the username and password$")
-	public void i_enter_the_following_for_Login() throws Throwable {	
-		login.i_enter_the_following_for_Login();
+	@And("^I enter the \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void i_enter_the_following_for_Login(String username, String password) throws Throwable {	
+		login.i_enter_the_following_for_Login(username, password);
 
 	}
 	

@@ -6,7 +6,6 @@ import net.serenitybdd.core.pages.WebElementFacade;
 public class CommonFunctions extends PageObject {
 
 	public void click(WebElementFacade by){
-
 		try{
 			if(by.isCurrentlyEnabled()){
 				by.click();
