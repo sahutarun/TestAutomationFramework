@@ -9,7 +9,6 @@ public class Hooks {
 	@Before
 	public void setup()throws Exception{
 		PropertyConfigurator.configure("Log4j.properties");
-
 	}
 	
 
