@@ -1,4 +1,4 @@
-package stepDefination;
+package stepDefinations.gui;
 
 import org.apache.log4j.PropertyConfigurator;
 
@@ -13,3 +13,5 @@ public class Hooks {
 	
 
 }
+
+

@@ -16,15 +16,12 @@ public class HomePage extends PageObject {
     /*Method to open home page*/
 	public void openLoginPage(){
 		open();
-
 	}
 
 	/* Method to click account link page*/
 	public void clickAccountLink(){
 		try{
-
 			link_account.click();
-
 		}catch(Exception e){
 			e.printStackTrace();
 		}
